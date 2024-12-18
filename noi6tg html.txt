@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nói 6 Thế Giới</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f5;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 1rem;
+            display: block;
+        }
+        nav a:hover {
+            background-color: #575757;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .form {
+            margin: 2rem 0;
+            padding: 1rem;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input, textarea, button {
+            width: 100%;
+            padding: 0.5rem;
+            margin: 0.5rem 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .profile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .profile img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+        .posts {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .post {
+            background: white;
+            padding: 1rem;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .post img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .post-actions {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 0.5rem;
+        }
+        .post-actions button {
+            padding: 0.5rem 1rem;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 4px;
+        }
+        .post-actions button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Nói 6 Thế Giới</h1>
+        <p>Chia sẻ khoảnh khắc, kết nối thế giới</p>
+    </header>
+
+    <nav>
+        <a href="#register">Đăng ký</a>
+        <a href="#profile">Trang cá nhân</a>
+        <a href="#chat">Nhắn tin</a>
+        <a href="#share">Chia sẻ khoảnh khắc</a>
+    </nav>
+
+    <div class="container">
+        <section id="register" class="form">
+            <h2>Đăng ký tài khoản</h2>
+            <form>
+                <label for="username">Tên đăng nhập:</label>
+                <input type="text" id="username" name="username" placeholder="Nhập tên đăng nhập" required>
+
+                <label for="password">Mật khẩu:</label>
+                <input type="password" id="password" name="password" placeholder="Nhập mật khẩu" required>
+
+                <button type="submit">Đăng ký</button>
+            </form>
+        </section>
+
+        <section id="profile" class="profile">
+            <h2>Trang cá nhân</h2>
+            <img src="default-avatar.png" alt="Ảnh đại diện">
+            <form>
+                <label for="profile-pic">Đổi ảnh đại diện:</label>
+                <input type="file" id="profile-pic" name="profile-pic">
+
+                <label for="display-name">Tên hiển thị:</label>
+                <input type="text" id="display-name" name="display-name" placeholder="Nhập tên mới">
+
+                <label for="bio">Tiểu sử:</label>
+                <textarea id="bio" name="bio" placeholder="Nhập tiểu sử..."></textarea>
+
+                <button type="submit">Cập nhật</button>
+            </form>
+        </section>
+
+        <section id="chat" class="form">
+            <h2>Nhắn tin</h2>
+            <form>
+                <label for="friend">Người nhận:</label>
+                <input type="text" id="friend" name="friend" placeholder="Nhập tên bạn bè">
+
+                <label for="message">Tin nhắn:</label>
+                <textarea id="message" name="message" placeholder="Nhập tin nhắn..."></textarea>
+
+                <button type="submit">Gửi</button>
+            </form>
+        </section>
+
+        <section id="share" class="form">
+            <h2>Chia sẻ khoảnh khắc</h2>
+            <form>
+                <label for="post-image">Tải ảnh lên:</label>
+                <input type="file" id="post-image" name="post-image">
+
+                <label for="post-caption">Chú thích:</label>
+                <textarea id="post-caption" name="post-caption" placeholder="Nhập chú thích cho ảnh..."></textarea>
+
+                <button type="submit">Chia sẻ</button>
+            </form>
+
+            <div class="posts">
+                <div class="post">
+                    <img src="example-photo.jpg" alt="Ảnh chia sẻ">
+                    <p>Đây là một khoảnh khắc đáng nhớ!</p>
+                    <div class="post-actions">
+                        <button>Like</button>
+                        <button>Bình luận</button>
+                        <button>Chia sẻ</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Nói 6 Thế Giới. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
